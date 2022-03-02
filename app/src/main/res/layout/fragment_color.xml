@@ -29,8 +29,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
-                    android:orientation="horizontal"
-                    tools:context=".AmericaActivity">
+                    android:orientation="horizontal">
 
                     <androidx.cardview.widget.CardView
                         android:id="@+id/card_red"
@@ -118,8 +117,7 @@
                 android:id="@+id/scroll_down"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/scroll_up"
-                tools:context=".AmericaActivity">
+                app:layout_constraintTop_toBottomOf="@id/scroll_up">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="wrap_content"
@@ -219,8 +217,7 @@
                 android:id="@+id/scroll_down_two"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/scroll_down"
-                tools:context=".AmericaActivity">
+                app:layout_constraintTop_toBottomOf="@id/scroll_down">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="wrap_content"
@@ -320,8 +317,7 @@
                 android:id="@+id/scroll_down_three"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/scroll_down_two"
-                tools:context=".AmericaActivity">
+                app:layout_constraintTop_toBottomOf="@id/scroll_down_two">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="wrap_content"

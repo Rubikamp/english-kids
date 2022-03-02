@@ -1,14 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <item
-        android:id="@+id/nav_flag"
-        android:icon="@drawable/ic_flag"
-        android:title="@string/Flag" />
-
-    <item
-        android:id="@+id/nav_color"
-        android:icon="@drawable/ic_colors"
-        android:title="@string/Colors" />
+<menu>
 
 </menu>
