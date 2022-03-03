@@ -1,405 +1,398 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment.FlagFragment">
+    tools:context="com.app.languagegame.fragment.FlagFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <androidx.core.widget.NestedScrollView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scrollbars="horizontal">
+        android:layout_height="wrap_content">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <HorizontalScrollView
+            android:id="@+id/scroll_up_flag"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="DuplicateIds">
 
-            <HorizontalScrollView
-                android:id="@+id/scroll_up_flag"
-                android:layout_width="match_parent"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="DuplicateIds">
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:orientation="horizontal">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:orientation="horizontal">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_usa"
+                    android:layout_width="180dp"
+                    android:layout_height="160dp"
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints">
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/card_usa"
-                        android:layout_width="210dp"
-                        android:layout_height="250dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="50dp"
-                        app:cardCornerRadius="18dp"
-                        app:cardElevation="20dp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        tools:ignore="MissingConstraints">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/flag_usa"
+                        android:layout_width="180dp"
+                        android:layout_height="160dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/ic_launcher_background" />
+                </androidx.cardview.widget.CardView>
 
-                        <androidx.appcompat.widget.AppCompatImageView
-                            android:id="@+id/flag_usa"
-                            android:layout_width="210dp"
-                            android:layout_height="250dp"
-                            android:scaleType="centerCrop"
-                            app:srcCompat="@drawable/ic_launcher_background" />
-                    </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_belgium"
+                    android:layout_width="180dp"
+                    android:layout_height="160dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="20dp"
+                    app:layout_constraintStart_toEndOf="@id/card_usa"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints">
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/card_belgium"
-                        android:layout_width="210dp"
-                        android:layout_height="250dp"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginTop="50dp"
-                        app:cardCornerRadius="18dp"
-                        app:cardElevation="20dp"
-                        app:layout_constraintStart_toEndOf="@id/card_usa"
-                        app:layout_constraintTop_toTopOf="parent"
-                        tools:ignore="MissingConstraints">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/flag_belgium"
+                        android:layout_width="180dp"
+                        android:layout_height="160dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/ic_launcher_background" />
+                </androidx.cardview.widget.CardView>
 
-                        <androidx.appcompat.widget.AppCompatImageView
-                            android:id="@+id/flag_belgium"
-                            android:layout_width="210dp"
-                            android:layout_height="250dp"
-                            android:scaleType="centerCrop"
-                            app:srcCompat="@drawable/ic_launcher_background" />
-                    </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_france"
+                    android:layout_width="180dp"
+                    android:layout_height="160dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="20dp"
+                    app:layout_constraintStart_toEndOf="@id/card_belgium"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints">
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/card_france"
-                        android:layout_width="210dp"
-                        android:layout_height="250dp"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginTop="50dp"
-                        app:cardCornerRadius="18dp"
-                        app:cardElevation="20dp"
-                        app:layout_constraintStart_toEndOf="@id/card_belgium"
-                        app:layout_constraintTop_toTopOf="parent"
-                        tools:ignore="MissingConstraints">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/flag_france"
+                        android:layout_width="180dp"
+                        android:layout_height="160dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/ic_launcher_background" />
+                </androidx.cardview.widget.CardView>
 
-                        <androidx.appcompat.widget.AppCompatImageView
-                            android:id="@+id/flag_france"
-                            android:layout_width="210dp"
-                            android:layout_height="250dp"
-                            android:scaleType="centerCrop"
-                            app:srcCompat="@drawable/ic_launcher_background" />
-                    </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_switzerland"
+                    android:layout_width="180dp"
+                    android:layout_height="160dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="20dp"
+                    app:layout_constraintStart_toEndOf="@id/card_france"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints">
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/card_switzerland"
-                        android:layout_width="210dp"
-                        android:layout_height="250dp"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginTop="50dp"
-                        app:cardCornerRadius="18dp"
-                        app:cardElevation="20dp"
-                        app:layout_constraintStart_toEndOf="@id/card_france"
-                        app:layout_constraintTop_toTopOf="parent"
-                        tools:ignore="MissingConstraints">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/flag_switzerland"
+                        android:layout_width="180dp"
+                        android:layout_height="160dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/ic_launcher_background" />
+                </androidx.cardview.widget.CardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </HorizontalScrollView>
 
-                        <androidx.appcompat.widget.AppCompatImageView
-                            android:id="@+id/flag_switzerland"
-                            android:layout_width="210dp"
-                            android:layout_height="250dp"
-                            android:scaleType="centerCrop"
-                            app:srcCompat="@drawable/ic_launcher_background" />
-                    </androidx.cardview.widget.CardView>
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </HorizontalScrollView>
+        <HorizontalScrollView
+            android:id="@+id/scroll_down_flag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/scroll_up_flag"
+            tools:ignore="DuplicateIds">
 
-            <HorizontalScrollView
-                android:id="@+id/scroll_down_flag"
-                android:layout_width="match_parent"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/scroll_up_flag"
-                tools:ignore="DuplicateIds">
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:orientation="horizontal">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:orientation="horizontal">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_italy"
+                    android:layout_width="180dp"
+                    android:layout_height="160dp"
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints">
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/card_italy"
-                        android:layout_width="210dp"
-                        android:layout_height="250dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="20dp"
-                        app:cardCornerRadius="18dp"
-                        app:cardElevation="20dp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        tools:ignore="MissingConstraints">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/flag_italy"
+                        android:layout_width="180dp"
+                        android:layout_height="160dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/ic_launcher_background" />
+                </androidx.cardview.widget.CardView>
 
-                        <androidx.appcompat.widget.AppCompatImageView
-                            android:id="@+id/flag_italy"
-                            android:layout_width="210dp"
-                            android:layout_height="250dp"
-                            android:scaleType="centerCrop"
-                            app:srcCompat="@drawable/ic_launcher_background" />
-                    </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_india"
+                    android:layout_width="180dp"
+                    android:layout_height="160dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="20dp"
+                    app:layout_constraintStart_toEndOf="@id/card_italy"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints">
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/card_india"
-                        android:layout_width="210dp"
-                        android:layout_height="250dp"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginTop="20dp"
-                        app:cardCornerRadius="18dp"
-                        app:cardElevation="20dp"
-                        app:layout_constraintStart_toEndOf="@id/card_italy"
-                        app:layout_constraintTop_toTopOf="parent"
-                        tools:ignore="MissingConstraints">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/flag_india"
+                        android:layout_width="180dp"
+                        android:layout_height="160dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/ic_launcher_background" />
+                </androidx.cardview.widget.CardView>
 
-                        <androidx.appcompat.widget.AppCompatImageView
-                            android:id="@+id/flag_india"
-                            android:layout_width="210dp"
-                            android:layout_height="250dp"
-                            android:scaleType="centerCrop"
-                            app:srcCompat="@drawable/ic_launcher_background" />
-                    </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_canada"
+                    android:layout_width="180dp"
+                    android:layout_height="160dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="20dp"
+                    app:layout_constraintStart_toEndOf="@id/card_india"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints">
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/card_canada"
-                        android:layout_width="210dp"
-                        android:layout_height="250dp"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginTop="20dp"
-                        app:cardCornerRadius="18dp"
-                        app:cardElevation="20dp"
-                        app:layout_constraintStart_toEndOf="@id/card_india"
-                        app:layout_constraintTop_toTopOf="parent"
-                        tools:ignore="MissingConstraints">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/flag_canada"
+                        android:layout_width="180dp"
+                        android:layout_height="160dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/ic_launcher_background" />
+                </androidx.cardview.widget.CardView>
 
-                        <androidx.appcompat.widget.AppCompatImageView
-                            android:id="@+id/flag_canada"
-                            android:layout_width="210dp"
-                            android:layout_height="250dp"
-                            android:scaleType="centerCrop"
-                            app:srcCompat="@drawable/ic_launcher_background" />
-                    </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_russia"
+                    android:layout_width="180dp"
+                    android:layout_height="160dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="20dp"
+                    app:layout_constraintStart_toEndOf="@id/card_canada"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints">
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/card_russia"
-                        android:layout_width="210dp"
-                        android:layout_height="250dp"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginTop="20dp"
-                        app:cardCornerRadius="18dp"
-                        app:cardElevation="20dp"
-                        app:layout_constraintStart_toEndOf="@id/card_canada"
-                        app:layout_constraintTop_toTopOf="parent"
-                        tools:ignore="MissingConstraints">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/flag_russia"
+                        android:layout_width="180dp"
+                        android:layout_height="160dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/ic_launcher_background" />
+                </androidx.cardview.widget.CardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </HorizontalScrollView>
 
-                        <androidx.appcompat.widget.AppCompatImageView
-                            android:id="@+id/flag_russia"
-                            android:layout_width="210dp"
-                            android:layout_height="250dp"
-                            android:scaleType="centerCrop"
-                            app:srcCompat="@drawable/ic_launcher_background" />
-                    </androidx.cardview.widget.CardView>
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </HorizontalScrollView>
+        <HorizontalScrollView
+            android:id="@+id/scroll_down_two_flag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/scroll_down_flag"
+            tools:ignore="DuplicateIds">
 
-            <HorizontalScrollView
-                android:id="@+id/scroll_down_two_flag"
-                android:layout_width="match_parent"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/scroll_down_flag"
-                tools:ignore="DuplicateIds">
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:orientation="horizontal">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:orientation="horizontal">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_china"
+                    android:layout_width="180dp"
+                    android:layout_height="160dp"
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints">
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/card_china"
-                        android:layout_width="210dp"
-                        android:layout_height="250dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="20dp"
-                        app:cardCornerRadius="18dp"
-                        app:cardElevation="20dp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        tools:ignore="MissingConstraints">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/flag_china"
+                        android:layout_width="180dp"
+                        android:layout_height="160dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/ic_launcher_background" />
+                </androidx.cardview.widget.CardView>
 
-                        <androidx.appcompat.widget.AppCompatImageView
-                            android:id="@+id/flag_china"
-                            android:layout_width="210dp"
-                            android:layout_height="250dp"
-                            android:scaleType="centerCrop"
-                            app:srcCompat="@drawable/ic_launcher_background" />
-                    </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_brazil"
+                    android:layout_width="180dp"
+                    android:layout_height="160dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="20dp"
+                    app:layout_constraintStart_toEndOf="@id/card_china"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints">
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/card_brazil"
-                        android:layout_width="210dp"
-                        android:layout_height="250dp"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginTop="20dp"
-                        app:cardCornerRadius="18dp"
-                        app:cardElevation="20dp"
-                        app:layout_constraintStart_toEndOf="@id/card_china"
-                        app:layout_constraintTop_toTopOf="parent"
-                        tools:ignore="MissingConstraints">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/flag_brazil"
+                        android:layout_width="180dp"
+                        android:layout_height="160dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/ic_launcher_background" />
+                </androidx.cardview.widget.CardView>
 
-                        <androidx.appcompat.widget.AppCompatImageView
-                            android:id="@+id/flag_brazil"
-                            android:layout_width="210dp"
-                            android:layout_height="250dp"
-                            android:scaleType="centerCrop"
-                            app:srcCompat="@drawable/ic_launcher_background" />
-                    </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_ukraine"
+                    android:layout_width="180dp"
+                    android:layout_height="160dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="20dp"
+                    app:layout_constraintStart_toEndOf="@id/card_brazil"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints">
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/card_ukraine"
-                        android:layout_width="210dp"
-                        android:layout_height="250dp"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginTop="20dp"
-                        app:cardCornerRadius="18dp"
-                        app:cardElevation="20dp"
-                        app:layout_constraintStart_toEndOf="@id/card_brazil"
-                        app:layout_constraintTop_toTopOf="parent"
-                        tools:ignore="MissingConstraints">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/flag_ukraine"
+                        android:layout_width="180dp"
+                        android:layout_height="160dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/ic_launcher_background" />
+                </androidx.cardview.widget.CardView>
 
-                        <androidx.appcompat.widget.AppCompatImageView
-                            android:id="@+id/flag_ukraine"
-                            android:layout_width="210dp"
-                            android:layout_height="250dp"
-                            android:scaleType="centerCrop"
-                            app:srcCompat="@drawable/ic_launcher_background" />
-                    </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_iceland"
+                    android:layout_width="180dp"
+                    android:layout_height="160dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="20dp"
+                    app:layout_constraintStart_toEndOf="@id/card_ukraine"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints">
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/card_iceland"
-                        android:layout_width="210dp"
-                        android:layout_height="250dp"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginTop="20dp"
-                        app:cardCornerRadius="18dp"
-                        app:cardElevation="20dp"
-                        app:layout_constraintStart_toEndOf="@id/card_ukraine"
-                        app:layout_constraintTop_toTopOf="parent"
-                        tools:ignore="MissingConstraints">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/flag_iceland"
+                        android:layout_width="180dp"
+                        android:layout_height="160dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/ic_launcher_background" />
+                </androidx.cardview.widget.CardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </HorizontalScrollView>
 
-                        <androidx.appcompat.widget.AppCompatImageView
-                            android:id="@+id/flag_iceland"
-                            android:layout_width="210dp"
-                            android:layout_height="250dp"
-                            android:scaleType="centerCrop"
-                            app:srcCompat="@drawable/ic_launcher_background" />
-                    </androidx.cardview.widget.CardView>
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </HorizontalScrollView>
+        <HorizontalScrollView
+            android:id="@+id/scroll_down_three_flag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/scroll_down_two_flag"
+            tools:ignore="DuplicateIds">
 
-            <HorizontalScrollView
-                android:id="@+id/scroll_down_three_flag"
-                android:layout_width="match_parent"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/scroll_down_two_flag"
-                tools:ignore="DuplicateIds">
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:orientation="horizontal">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:orientation="horizontal">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_iran"
+                    android:layout_width="180dp"
+                    android:layout_height="160dp"
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints">
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/card_iran"
-                        android:layout_width="210dp"
-                        android:layout_height="250dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="20dp"
-                        app:cardCornerRadius="18dp"
-                        app:cardElevation="20dp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        tools:ignore="MissingConstraints">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/flag_iran"
+                        android:layout_width="180dp"
+                        android:layout_height="160dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/ic_launcher_background" />
+                </androidx.cardview.widget.CardView>
 
-                        <androidx.appcompat.widget.AppCompatImageView
-                            android:id="@+id/flag_iran"
-                            android:layout_width="210dp"
-                            android:layout_height="250dp"
-                            android:scaleType="centerCrop"
-                            app:srcCompat="@drawable/ic_launcher_background" />
-                    </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_qatar"
+                    android:layout_width="180dp"
+                    android:layout_height="160dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/card_iran"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints">
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/card_qatar"
-                        android:layout_width="210dp"
-                        android:layout_height="250dp"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginTop="20dp"
-                        app:cardCornerRadius="18dp"
-                        app:cardElevation="20dp"
-                        app:layout_constraintStart_toEndOf="@id/card_iran"
-                        app:layout_constraintTop_toTopOf="parent"
-                        tools:ignore="MissingConstraints">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/flag_qatar"
+                        android:layout_width="180dp"
+                        android:layout_height="160dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/ic_launcher_background" />
+                </androidx.cardview.widget.CardView>
 
-                        <androidx.appcompat.widget.AppCompatImageView
-                            android:id="@+id/flag_qatar"
-                            android:layout_width="210dp"
-                            android:layout_height="250dp"
-                            android:scaleType="centerCrop"
-                            app:srcCompat="@drawable/ic_launcher_background" />
-                    </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_azerbaijan"
+                    android:layout_width="180dp"
+                    android:layout_height="160dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/card_qatar"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints">
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/card_azerbaijan"
-                        android:layout_width="210dp"
-                        android:layout_height="250dp"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginTop="20dp"
-                        app:cardCornerRadius="18dp"
-                        app:cardElevation="20dp"
-                        app:layout_constraintStart_toEndOf="@id/card_qatar"
-                        app:layout_constraintTop_toTopOf="parent"
-                        tools:ignore="MissingConstraints">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/flag_azerbaijan"
+                        android:layout_width="180dp"
+                        android:layout_height="160dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/ic_launcher_background" />
+                </androidx.cardview.widget.CardView>
 
-                        <androidx.appcompat.widget.AppCompatImageView
-                            android:id="@+id/flag_azerbaijan"
-                            android:layout_width="210dp"
-                            android:layout_height="250dp"
-                            android:scaleType="centerCrop"
-                            app:srcCompat="@drawable/ic_launcher_background" />
-                    </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_turkey"
+                    android:layout_width="180dp"
+                    android:layout_height="160dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/card_azerbaijan"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints">
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/card_turkey"
-                        android:layout_width="210dp"
-                        android:layout_height="250dp"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginTop="20dp"
-                        app:cardCornerRadius="18dp"
-                        app:cardElevation="20dp"
-                        app:layout_constraintStart_toEndOf="@id/card_azerbaijan"
-                        app:layout_constraintTop_toTopOf="parent"
-                        tools:ignore="MissingConstraints">
-
-                        <androidx.appcompat.widget.AppCompatImageView
-                            android:id="@+id/flag_turkey"
-                            android:layout_width="210dp"
-                            android:layout_height="250dp"
-                            android:scaleType="centerCrop"
-                            app:srcCompat="@drawable/ic_launcher_background" />
-                    </androidx.cardview.widget.CardView>
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </HorizontalScrollView>
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.core.widget.NestedScrollView>
-
-</FrameLayout>
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/flag_turkey"
+                        android:layout_width="180dp"
+                        android:layout_height="160dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/ic_launcher_background" />
+                </androidx.cardview.widget.CardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </HorizontalScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

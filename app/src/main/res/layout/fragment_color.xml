@@ -1,417 +1,404 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment.ColorFragment">
+    tools:context="com.app.languagegame.fragment.ColorFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <androidx.core.widget.NestedScrollView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scrollbars="horizontal">
+        android:layout_height="wrap_content">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <HorizontalScrollView
+            android:id="@+id/scroll_up_color"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:context="com.app.languagegame.ColorActivity"
+            tools:ignore="DuplicateIds">
 
-            <HorizontalScrollView
-                android:id="@+id/scroll_up"
-                android:layout_width="match_parent"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:context=".AmericaActivity"
-                tools:ignore="DuplicateIds">
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:orientation="horizontal">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:orientation="horizontal">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_red"
+                    android:layout_width="180dp"
+                    android:layout_height="160dp"
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints">
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/card_red"
-                        android:layout_width="210dp"
-                        android:layout_height="250dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="50dp"
-                        app:cardCornerRadius="18dp"
-                        app:cardElevation="20dp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        tools:ignore="MissingConstraints">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/color_red"
+                        android:layout_width="180dp"
+                        android:layout_height="160dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/ic_launcher_background" />
+                </androidx.cardview.widget.CardView>
 
-                        <androidx.appcompat.widget.AppCompatImageView
-                            android:id="@+id/color_red"
-                            android:layout_width="210dp"
-                            android:layout_height="250dp"
-                            android:scaleType="centerCrop"
-                            app:srcCompat="@drawable/ic_launcher_background" />
-                    </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_yellow"
+                    android:layout_width="180dp"
+                    android:layout_height="160dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="20dp"
+                    app:layout_constraintStart_toEndOf="@id/card_red"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints">
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/card_yellow"
-                        android:layout_width="210dp"
-                        android:layout_height="250dp"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginTop="50dp"
-                        app:cardCornerRadius="18dp"
-                        app:cardElevation="20dp"
-                        app:layout_constraintStart_toEndOf="@id/card_red"
-                        app:layout_constraintTop_toTopOf="parent"
-                        tools:ignore="MissingConstraints">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/color_yellow"
+                        android:layout_width="180dp"
+                        android:layout_height="160dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/ic_launcher_background" />
+                </androidx.cardview.widget.CardView>
 
-                        <androidx.appcompat.widget.AppCompatImageView
-                            android:id="@+id/color_yellow"
-                            android:layout_width="210dp"
-                            android:layout_height="250dp"
-                            android:scaleType="centerCrop"
-                            app:srcCompat="@drawable/ic_launcher_background" />
-                    </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_blue"
+                    android:layout_width="180dp"
+                    android:layout_height="160dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="20dp"
+                    app:layout_constraintStart_toEndOf="@id/card_yellow"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints">
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/card_blue"
-                        android:layout_width="210dp"
-                        android:layout_height="250dp"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginTop="50dp"
-                        app:cardCornerRadius="18dp"
-                        app:cardElevation="20dp"
-                        app:layout_constraintStart_toEndOf="@id/card_yellow"
-                        app:layout_constraintTop_toTopOf="parent"
-                        tools:ignore="MissingConstraints">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/color_blue"
+                        android:layout_width="180dp"
+                        android:layout_height="160dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/ic_launcher_background" />
+                </androidx.cardview.widget.CardView>
 
-                        <androidx.appcompat.widget.AppCompatImageView
-                            android:id="@+id/color_blue"
-                            android:layout_width="210dp"
-                            android:layout_height="250dp"
-                            android:scaleType="centerCrop"
-                            app:srcCompat="@drawable/ic_launcher_background" />
-                    </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_green"
+                    android:layout_width="180dp"
+                    android:layout_height="160dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="20dp"
+                    app:layout_constraintStart_toEndOf="@id/card_blue"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints">
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/card_green"
-                        android:layout_width="210dp"
-                        android:layout_height="250dp"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginTop="50dp"
-                        app:cardCornerRadius="18dp"
-                        app:cardElevation="20dp"
-                        app:layout_constraintStart_toEndOf="@id/card_blue"
-                        app:layout_constraintTop_toTopOf="parent"
-                        tools:ignore="MissingConstraints">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/color_green"
+                        android:layout_width="180dp"
+                        android:layout_height="160dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/ic_launcher_background" />
+                </androidx.cardview.widget.CardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </HorizontalScrollView>
 
-                        <androidx.appcompat.widget.AppCompatImageView
-                            android:id="@+id/color_green"
-                            android:layout_width="210dp"
-                            android:layout_height="250dp"
-                            android:scaleType="centerCrop"
-                            app:srcCompat="@drawable/ic_launcher_background" />
-                    </androidx.cardview.widget.CardView>
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </HorizontalScrollView>
+        <HorizontalScrollView
+            android:id="@+id/scroll_down"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/scroll_up_color">
 
-            <HorizontalScrollView
-                android:id="@+id/scroll_down"
-                android:layout_width="match_parent"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/scroll_up">
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:orientation="horizontal">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:orientation="horizontal">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_brown"
+                    android:layout_width="180dp"
+                    android:layout_height="160dp"
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints">
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/card_brown"
-                        android:layout_width="210dp"
-                        android:layout_height="250dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="20dp"
-                        app:cardCornerRadius="18dp"
-                        app:cardElevation="20dp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        tools:ignore="MissingConstraints">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/color_brown"
+                        android:layout_width="180dp"
+                        android:layout_height="160dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_launcher_background" />
 
-                        <androidx.appcompat.widget.AppCompatImageView
-                            android:id="@+id/color_brown"
-                            android:layout_width="210dp"
-                            android:layout_height="250dp"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/ic_launcher_background" />
+                </androidx.cardview.widget.CardView>
 
-                    </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_pink"
+                    android:layout_width="180dp"
+                    android:layout_height="160dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="20dp"
+                    app:layout_constraintStart_toEndOf="@id/card_brown"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints">
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/card_pink"
-                        android:layout_width="210dp"
-                        android:layout_height="250dp"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginTop="20dp"
-                        app:cardCornerRadius="18dp"
-                        app:cardElevation="20dp"
-                        app:layout_constraintStart_toEndOf="@id/card_brown"
-                        app:layout_constraintTop_toTopOf="parent"
-                        tools:ignore="MissingConstraints">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/color_pink"
+                        android:layout_width="180dp"
+                        android:layout_height="160dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_launcher_background" />
 
-                        <androidx.appcompat.widget.AppCompatImageView
-                            android:id="@+id/color_pink"
-                            android:layout_width="210dp"
-                            android:layout_height="250dp"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/ic_launcher_background" />
+                </androidx.cardview.widget.CardView>
 
-                    </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_purple"
+                    android:layout_width="180dp"
+                    android:layout_height="160dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="20dp"
+                    app:layout_constraintStart_toEndOf="@id/card_pink"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints">
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/card_purple"
-                        android:layout_width="210dp"
-                        android:layout_height="250dp"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginTop="20dp"
-                        app:cardCornerRadius="18dp"
-                        app:cardElevation="20dp"
-                        app:layout_constraintStart_toEndOf="@id/card_pink"
-                        app:layout_constraintTop_toTopOf="parent"
-                        tools:ignore="MissingConstraints">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/color_purple"
+                        android:layout_width="180dp"
+                        android:layout_height="160dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_launcher_background" />
 
-                        <androidx.appcompat.widget.AppCompatImageView
-                            android:id="@+id/color_purple"
-                            android:layout_width="210dp"
-                            android:layout_height="250dp"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/ic_launcher_background" />
+                </androidx.cardview.widget.CardView>
 
-                    </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_black"
+                    android:layout_width="180dp"
+                    android:layout_height="160dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="20dp"
+                    app:layout_constraintStart_toEndOf="@id/card_purple"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints">
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/card_black"
-                        android:layout_width="210dp"
-                        android:layout_height="250dp"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginTop="20dp"
-                        app:cardCornerRadius="18dp"
-                        app:cardElevation="20dp"
-                        app:layout_constraintStart_toEndOf="@id/card_purple"
-                        app:layout_constraintTop_toTopOf="parent"
-                        tools:ignore="MissingConstraints">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/color_black"
+                        android:layout_width="180dp"
+                        android:layout_height="160dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_launcher_background" />
 
-                        <androidx.appcompat.widget.AppCompatImageView
-                            android:id="@+id/color_black"
-                            android:layout_width="210dp"
-                            android:layout_height="250dp"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/ic_launcher_background" />
+                </androidx.cardview.widget.CardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </HorizontalScrollView>
 
-                    </androidx.cardview.widget.CardView>
+        <HorizontalScrollView
+            android:id="@+id/scroll_down_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/scroll_down">
 
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </HorizontalScrollView>
-
-            <HorizontalScrollView
-                android:id="@+id/scroll_down_two"
-                android:layout_width="match_parent"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/scroll_down">
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:orientation="horizontal">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:orientation="horizontal">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_orange"
+                    android:layout_width="180dp"
+                    android:layout_height="160dp"
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints">
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/card_orange"
-                        android:layout_width="210dp"
-                        android:layout_height="250dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="20dp"
-                        app:cardCornerRadius="18dp"
-                        app:cardElevation="20dp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        tools:ignore="MissingConstraints">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/color_orange"
+                        android:layout_width="180dp"
+                        android:layout_height="160dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_launcher_background" />
 
-                        <androidx.appcompat.widget.AppCompatImageView
-                            android:id="@+id/color_orange"
-                            android:layout_width="210dp"
-                            android:layout_height="250dp"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/ic_launcher_background" />
+                </androidx.cardview.widget.CardView>
 
-                    </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_white"
+                    android:layout_width="180dp"
+                    android:layout_height="160dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="20dp"
+                    app:layout_constraintStart_toEndOf="@id/card_orange"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints">
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/card_white"
-                        android:layout_width="210dp"
-                        android:layout_height="250dp"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginTop="20dp"
-                        app:cardCornerRadius="18dp"
-                        app:cardElevation="20dp"
-                        app:layout_constraintStart_toEndOf="@id/card_orange"
-                        app:layout_constraintTop_toTopOf="parent"
-                        tools:ignore="MissingConstraints">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/color_white"
+                        android:layout_width="180dp"
+                        android:layout_height="160dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_launcher_background" />
 
-                        <androidx.appcompat.widget.AppCompatImageView
-                            android:id="@+id/color_white"
-                            android:layout_width="210dp"
-                            android:layout_height="250dp"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/ic_launcher_background" />
+                </androidx.cardview.widget.CardView>
 
-                    </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_gold"
+                    android:layout_width="180dp"
+                    android:layout_height="160dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="20dp"
+                    app:layout_constraintStart_toEndOf="@id/card_white"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints">
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/card_gold"
-                        android:layout_width="210dp"
-                        android:layout_height="250dp"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginTop="20dp"
-                        app:cardCornerRadius="18dp"
-                        app:cardElevation="20dp"
-                        app:layout_constraintStart_toEndOf="@id/card_white"
-                        app:layout_constraintTop_toTopOf="parent"
-                        tools:ignore="MissingConstraints">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/color_gold"
+                        android:layout_width="180dp"
+                        android:layout_height="160dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_launcher_background" />
 
-                        <androidx.appcompat.widget.AppCompatImageView
-                            android:id="@+id/color_gold"
-                            android:layout_width="210dp"
-                            android:layout_height="250dp"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/ic_launcher_background" />
+                </androidx.cardview.widget.CardView>
 
-                    </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_sky_blue"
+                    android:layout_width="180dp"
+                    android:layout_height="160dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="20dp"
+                    app:layout_constraintStart_toEndOf="@id/card_gold"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints">
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/card_sky_blue"
-                        android:layout_width="210dp"
-                        android:layout_height="250dp"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginTop="20dp"
-                        app:cardCornerRadius="18dp"
-                        app:cardElevation="20dp"
-                        app:layout_constraintStart_toEndOf="@id/card_gold"
-                        app:layout_constraintTop_toTopOf="parent"
-                        tools:ignore="MissingConstraints">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/color_sky_blue"
+                        android:layout_width="180dp"
+                        android:layout_height="160dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_launcher_background" />
 
-                        <androidx.appcompat.widget.AppCompatImageView
-                            android:id="@+id/color_sky_blue"
-                            android:layout_width="210dp"
-                            android:layout_height="250dp"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/ic_launcher_background" />
+                </androidx.cardview.widget.CardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </HorizontalScrollView>
 
-                    </androidx.cardview.widget.CardView>
+        <HorizontalScrollView
+            android:id="@+id/scroll_down_three"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/scroll_down_two">
 
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </HorizontalScrollView>
-
-            <HorizontalScrollView
-                android:id="@+id/scroll_down_three"
-                android:layout_width="match_parent"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/scroll_down_two">
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:orientation="horizontal">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:orientation="horizontal">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_grey"
+                    android:layout_width="180dp"
+                    android:layout_height="160dp"
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints">
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/card_grey"
-                        android:layout_width="210dp"
-                        android:layout_height="250dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="20dp"
-                        app:cardCornerRadius="18dp"
-                        app:cardElevation="20dp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        tools:ignore="MissingConstraints">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/color_grey"
+                        android:layout_width="180dp"
+                        android:layout_height="160dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_launcher_background" />
 
-                        <androidx.appcompat.widget.AppCompatImageView
-                            android:id="@+id/color_grey"
-                            android:layout_width="210dp"
-                            android:layout_height="250dp"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/ic_launcher_background" />
+                </androidx.cardview.widget.CardView>
 
-                    </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_anim_orange"
+                    android:layout_width="180dp"
+                    android:layout_height="160dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="20dp"
+                    app:layout_constraintStart_toEndOf="@id/card_grey"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints">
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/card_anim_orange"
-                        android:layout_width="210dp"
-                        android:layout_height="250dp"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginTop="20dp"
-                        app:cardCornerRadius="18dp"
-                        app:cardElevation="20dp"
-                        app:layout_constraintStart_toEndOf="@id/card_grey"
-                        app:layout_constraintTop_toTopOf="parent"
-                        tools:ignore="MissingConstraints">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/color_anim_orange"
+                        android:layout_width="180dp"
+                        android:layout_height="160dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_launcher_background" />
 
-                        <androidx.appcompat.widget.AppCompatImageView
-                            android:id="@+id/color_anim_orange"
-                            android:layout_width="210dp"
-                            android:layout_height="250dp"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/ic_launcher_background" />
+                </androidx.cardview.widget.CardView>
 
-                    </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_anim_green"
+                    android:layout_width="180dp"
+                    android:layout_height="160dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="20dp"
+                    app:layout_constraintStart_toEndOf="@id/card_anim_orange"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints">
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/card_anim_green"
-                        android:layout_width="210dp"
-                        android:layout_height="250dp"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginTop="20dp"
-                        app:cardCornerRadius="18dp"
-                        app:cardElevation="20dp"
-                        app:layout_constraintStart_toEndOf="@id/card_anim_orange"
-                        app:layout_constraintTop_toTopOf="parent"
-                        tools:ignore="MissingConstraints">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/color_anim_green"
+                        android:layout_width="180dp"
+                        android:layout_height="160dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_launcher_background" />
 
-                        <androidx.appcompat.widget.AppCompatImageView
-                            android:id="@+id/color_anim_green"
-                            android:layout_width="210dp"
-                            android:layout_height="250dp"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/ic_launcher_background" />
+                </androidx.cardview.widget.CardView>
 
-                    </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_anim_pink"
+                    android:layout_width="180dp"
+                    android:layout_height="160dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="20dp"
+                    app:layout_constraintStart_toEndOf="@id/card_anim_green"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints">
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/card_anim_pink"
-                        android:layout_width="210dp"
-                        android:layout_height="250dp"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginTop="20dp"
-                        app:cardCornerRadius="18dp"
-                        app:cardElevation="20dp"
-                        app:layout_constraintStart_toEndOf="@id/card_anim_green"
-                        app:layout_constraintTop_toTopOf="parent"
-                        tools:ignore="MissingConstraints">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/color_anim_pink"
+                        android:layout_width="180dp"
+                        android:layout_height="160dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_launcher_background" />
 
-                        <androidx.appcompat.widget.AppCompatImageView
-                            android:id="@+id/color_anim_pink"
-                            android:layout_width="210dp"
-                            android:layout_height="250dp"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/ic_launcher_background" />
-
-                    </androidx.cardview.widget.CardView>
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </HorizontalScrollView>
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.core.widget.NestedScrollView>
-</FrameLayout>
+                </androidx.cardview.widget.CardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </HorizontalScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

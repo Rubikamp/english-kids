@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,409 +8,376 @@
 
     <!-- TODO: Update blank fragment layout -->
 
-
-    <androidx.core.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scrollbars="horizontal"/>
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content">
 
-    <HorizontalScrollView
-        android:id="@+id/scroll_up"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="DuplicateIds,ScrollViewCount">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="wrap_content"
+        <HorizontalScrollView
+            android:id="@+id/scroll_up_fruit"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:orientation="horizontal">
-
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="DuplicateIds">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
-                android:orientation="horizontal"
-                tools:context=".MainActivity"
-                tools:ignore="MissingConstraints" />
+                android:orientation="horizontal">
 
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card_lemon"
-                android:layout_width="180dp"
-                android:layout_height="160dp"
-                android:layout_marginTop="30dp"
-                app:cardCornerRadius="18dp"
-                app:cardElevation="20dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="MissingConstraints">
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/pic_lemon"
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_lemon"
                     android:layout_width="180dp"
                     android:layout_height="160dp"
-                    android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/ic_launcher_background" />
-            </androidx.cardview.widget.CardView>
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/image_lemon"
+                        android:layout_width="180dp"
+                        android:layout_height="160dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/ic_launcher_background" />
+                </androidx.cardview.widget.CardView>
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card_banana"
-                android:layout_width="180dp"
-                android:layout_height="160dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="30dp"
-                app:cardCornerRadius="18dp"
-                app:cardElevation="20dp"
-                app:layout_constraintStart_toEndOf="@id/card_lemon"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="MissingConstraints">
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/pic_banana"
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_banana"
                     android:layout_width="180dp"
                     android:layout_height="160dp"
-                    android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/ic_launcher_background" />
-            </androidx.cardview.widget.CardView>
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="20dp"
+                    app:layout_constraintStart_toEndOf="@id/card_lemon"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/image_banana"
+                        android:layout_width="180dp"
+                        android:layout_height="160dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/ic_launcher_background" />
+                </androidx.cardview.widget.CardView>
 
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card_coconut"
-                android:layout_width="180dp"
-                android:layout_height="160dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="30dp"
-                app:cardCornerRadius="18dp"
-                app:cardElevation="20dp"
-                app:layout_constraintStart_toEndOf="@id/card_banana"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="MissingConstraints">
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/pic_coconut"
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_coconut"
                     android:layout_width="180dp"
                     android:layout_height="160dp"
-                    android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/ic_launcher_background" />
-            </androidx.cardview.widget.CardView>
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="20dp"
+                    app:layout_constraintStart_toEndOf="@id/card_banana"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/image_coconut"
+                        android:layout_width="180dp"
+                        android:layout_height="160dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/ic_launcher_background" />
+                </androidx.cardview.widget.CardView>
 
-
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card_pear"
-                android:layout_width="180dp"
-                android:layout_height="160dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="30dp"
-                app:cardCornerRadius="18dp"
-                app:cardElevation="20dp"
-                app:layout_constraintStart_toEndOf="@id/card_coconut"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="MissingConstraints">
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/pic_pear"
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_pear"
                     android:layout_width="180dp"
                     android:layout_height="160dp"
-                    android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/ic_launcher_background" />
-            </androidx.cardview.widget.CardView>
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </HorizontalScrollView>
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="20dp"
+                    app:layout_constraintStart_toEndOf="@id/card_coconut"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/image_pear"
+                        android:layout_width="180dp"
+                        android:layout_height="160dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/ic_launcher_background" />
+                </androidx.cardview.widget.CardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </HorizontalScrollView>
 
-
-    <HorizontalScrollView
-        android:id="@+id/scroll_up2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:context=".MainActivity"
-        tools:ignore="DuplicateIds">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="wrap_content"
+        <HorizontalScrollView
+            android:id="@+id/scroll_down_flag"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:orientation="horizontal"
-            tools:context=".MainActivity">
+            app:layout_constraintTop_toBottomOf="@id/scroll_up_fruit"
+            tools:ignore="DuplicateIds">
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card_apple"
-                android:layout_width="180dp"
-                android:layout_height="160dp"
-                android:layout_marginTop="200dp"
-                app:cardCornerRadius="18dp"
-                app:cardElevation="20dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="MissingConstraints">
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/pic_apple"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_apple"
                     android:layout_width="180dp"
                     android:layout_height="160dp"
-                    android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/ic_launcher_background" />
-            </androidx.cardview.widget.CardView>
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/image_apple"
+                        android:layout_width="180dp"
+                        android:layout_height="160dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/ic_launcher_background" />
+                </androidx.cardview.widget.CardView>
 
-
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card_strawberry"
-                android:layout_width="180dp"
-                android:layout_height="160dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="200dp"
-                app:cardCornerRadius="18dp"
-                app:cardElevation="20dp"
-                app:layout_constraintStart_toEndOf="@id/card_apple"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="MissingConstraints">
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/pic_strawberry"
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_strawberry"
                     android:layout_width="180dp"
                     android:layout_height="160dp"
-                    android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/ic_launcher_background" />
-            </androidx.cardview.widget.CardView>
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="20dp"
+                    app:layout_constraintStart_toEndOf="@id/card_apple"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/image_strawberry"
+                        android:layout_width="180dp"
+                        android:layout_height="160dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/ic_launcher_background" />
+                </androidx.cardview.widget.CardView>
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card_raspberry"
-                android:layout_width="180dp"
-                android:layout_height="160dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="200dp"
-                app:cardCornerRadius="18dp"
-                app:cardElevation="20dp"
-                app:layout_constraintStart_toEndOf="@id/card_strawberry"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="MissingConstraints">
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/pic_raspberry"
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_rasberry"
                     android:layout_width="180dp"
                     android:layout_height="160dp"
-                    android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/ic_launcher_background" />
-            </androidx.cardview.widget.CardView>
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="20dp"
+                    app:layout_constraintStart_toEndOf="@id/card_strawberry"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/image_rasberry"
+                        android:layout_width="180dp"
+                        android:layout_height="160dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/ic_launcher_background" />
+                </androidx.cardview.widget.CardView>
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card_cherry"
-                android:layout_width="180dp"
-                android:layout_height="160dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="200dp"
-                app:cardCornerRadius="18dp"
-                app:cardElevation="20dp"
-                app:layout_constraintStart_toEndOf="@id/card_raspberry"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="MissingConstraints">
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/pic_cherry"
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_cherries"
                     android:layout_width="180dp"
                     android:layout_height="160dp"
-                    android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/ic_launcher_background" />
-            </androidx.cardview.widget.CardView>
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </HorizontalScrollView>
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="20dp"
+                    app:layout_constraintStart_toEndOf="@id/card_rasberry"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/image_cherries"
+                        android:layout_width="180dp"
+                        android:layout_height="160dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/ic_launcher_background" />
+                </androidx.cardview.widget.CardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </HorizontalScrollView>
 
-
-    <HorizontalScrollView
-        android:id="@+id/scroll_up2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:context=".MainActivity"
-        tools:ignore="DuplicateIds">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="wrap_content"
+        <HorizontalScrollView
+            android:id="@+id/scroll_down_two_flag"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:orientation="horizontal"
-            tools:context=".MainActivity">
+            app:layout_constraintTop_toBottomOf="@id/scroll_down_flag"
+            tools:ignore="DuplicateIds">
 
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:orientation="horizontal">
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card_orange"
-                android:layout_width="180dp"
-                android:layout_height="160dp"
-                android:layout_marginTop="370dp"
-                app:cardCornerRadius="18dp"
-                app:cardElevation="20dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="MissingConstraints">
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/pic_orange"
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_orange"
                     android:layout_width="180dp"
                     android:layout_height="160dp"
-                    android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/ic_launcher_background" />
-            </androidx.cardview.widget.CardView>
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/image_orange"
+                        android:layout_width="180dp"
+                        android:layout_height="160dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/ic_launcher_background" />
+                </androidx.cardview.widget.CardView>
 
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card_grapes"
-                android:layout_width="180dp"
-                android:layout_height="160dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="370dp"
-                app:cardCornerRadius="18dp"
-                app:cardElevation="20dp"
-                app:layout_constraintStart_toEndOf="@id/card_orange"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="MissingConstraints">
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/pic_grapes"
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_grape"
                     android:layout_width="180dp"
                     android:layout_height="160dp"
-                    android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/ic_launcher_background" />
-            </androidx.cardview.widget.CardView>
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="20dp"
+                    app:layout_constraintStart_toEndOf="@id/card_orange"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/image_grape"
+                        android:layout_width="180dp"
+                        android:layout_height="160dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/ic_launcher_background" />
+                </androidx.cardview.widget.CardView>
 
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card_kiwi"
-                android:layout_width="180dp"
-                android:layout_height="160dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="370dp"
-                app:cardCornerRadius="18dp"
-                app:cardElevation="20dp"
-                app:layout_constraintStart_toEndOf="@id/card_grapes"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="MissingConstraints">
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/pic_kiwi"
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_kiwi"
                     android:layout_width="180dp"
                     android:layout_height="160dp"
-                    android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/ic_launcher_background" />
-            </androidx.cardview.widget.CardView>
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="20dp"
+                    app:layout_constraintStart_toEndOf="@id/card_grape"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/image_kiwi"
+                        android:layout_width="180dp"
+                        android:layout_height="160dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/ic_launcher_background" />
+                </androidx.cardview.widget.CardView>
 
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card_pineapple"
-                android:layout_width="180dp"
-                android:layout_height="160dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="370dp"
-                app:cardCornerRadius="18dp"
-                app:cardElevation="20dp"
-                app:layout_constraintStart_toEndOf="@id/card_kiwi"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="MissingConstraints">
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/pic_pineapple"
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_pineapple"
                     android:layout_width="180dp"
                     android:layout_height="160dp"
-                    android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/ic_launcher_background" />
-            </androidx.cardview.widget.CardView>
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </HorizontalScrollView>
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="20dp"
+                    app:layout_constraintStart_toEndOf="@id/card_kiwi"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/image_pineapple"
+                        android:layout_width="180dp"
+                        android:layout_height="160dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/ic_launcher_background" />
+                </androidx.cardview.widget.CardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </HorizontalScrollView>
 
-
-    <HorizontalScrollView
-        android:id="@+id/scroll_up2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:context=".MainActivity"
-        tools:ignore="DuplicateIds">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="wrap_content"
+        <HorizontalScrollView
+            android:id="@+id/scroll_down_three_flag"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:orientation="horizontal"
-            tools:context=".MainActivity">
+            app:layout_constraintTop_toBottomOf="@id/scroll_down_two_flag"
+            tools:ignore="DuplicateIds">
 
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:orientation="horizontal">
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card_watermelon"
-                android:layout_width="180dp"
-                android:layout_height="160dp"
-                android:layout_marginTop="540dp"
-                app:cardCornerRadius="18dp"
-                app:cardElevation="20dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="MissingConstraints">
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/pic_watermelon"
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_watermelon"
                     android:layout_width="180dp"
                     android:layout_height="160dp"
-                    android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/ic_launcher_background" />
-            </androidx.cardview.widget.CardView>
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/image_watermelon"
+                        android:layout_width="180dp"
+                        android:layout_height="160dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/ic_launcher_background" />
+                </androidx.cardview.widget.CardView>
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card_peach"
-                android:layout_width="180dp"
-                android:layout_height="160dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="540dp"
-                app:cardCornerRadius="18dp"
-                app:cardElevation="20dp"
-                app:layout_constraintStart_toEndOf="@id/card_watermelon"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="MissingConstraints">
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/pic_peach"
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_peach"
                     android:layout_width="180dp"
                     android:layout_height="160dp"
-                    android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/ic_launcher_background" />
-            </androidx.cardview.widget.CardView>
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/card_watermelon"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/image_peach"
+                        android:layout_width="180dp"
+                        android:layout_height="160dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/ic_launcher_background" />
+                </androidx.cardview.widget.CardView>
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card_avocado"
-                android:layout_width="180dp"
-                android:layout_height="160dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="540dp"
-                app:cardCornerRadius="18dp"
-                app:cardElevation="20dp"
-                app:layout_constraintStart_toEndOf="@id/card_peach"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="MissingConstraints">
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/pic_avocado"
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_avocado"
                     android:layout_width="180dp"
                     android:layout_height="160dp"
-                    android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/ic_launcher_background" />
-            </androidx.cardview.widget.CardView>
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/card_peach"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/image_avocado"
+                        android:layout_width="180dp"
+                        android:layout_height="160dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/ic_launcher_background" />
+                </androidx.cardview.widget.CardView>
 
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card_mango"
-                android:layout_width="180dp"
-                android:layout_height="160dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="540dp"
-                app:cardCornerRadius="18dp"
-                app:cardElevation="20dp"
-                app:layout_constraintStart_toEndOf="@id/card_avocado"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="MissingConstraints">
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/pic_mango"
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_mango"
                     android:layout_width="180dp"
                     android:layout_height="160dp"
-                    android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/ic_launcher_background" />
-            </androidx.cardview.widget.CardView>
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </HorizontalScrollView>
-
-</FrameLayout>
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/card_avocado"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/image_mango"
+                        android:layout_width="180dp"
+                        android:layout_height="160dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/ic_launcher_background" />
+                </androidx.cardview.widget.CardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </HorizontalScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
