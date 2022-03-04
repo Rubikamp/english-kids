@@ -8,6 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.app.languagegame.R;
+
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link AnimalsFragment#newInstance} factory method to
