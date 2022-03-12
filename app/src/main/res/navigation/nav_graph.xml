@@ -3,22 +3,30 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/nav_flag">
+    app:startDestination="@id/nav_flags">
 
     <fragment
-        android:id="@+id/nav_flag"
+        android:id="@+id/nav_flags"
         android:name="com.app.languagegame.fragment.FlagFragment"
         android:label="fragment_flag"
         tools:layout="@layout/fragment_flag" >
     </fragment>
     <fragment
-        android:id="@+id/nav_color"
+        android:id="@+id/nav_colors"
         android:name="com.app.languagegame.fragment.ColorFragment"
         android:label="fragment_color"
         tools:layout="@layout/fragment_color" />
+
     <fragment
-        android:id="@+id/nav_splash"
-        android:name="com.app.languagegame.fragment.SplashFragment"
+        android:id="@+id/nav_animals"
+        android:name="com.app.languagegame.fragment.AnimalsFragment"
         android:label="fragment_splash"
-        tools:layout="@layout/fragment_splash" />
+        tools:layout="@layout/fragment_animals" />
+
+    <fragment
+        android:id="@+id/nav_fruits"
+        android:name="com.app.languagegame.fragment.FruitFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_fruit" />
+
 </navigation>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group>
+        <item
+            android:id="@+id/nav_flags"
+            android:icon="@drawable/ic_flag"
+            android:title="Flags" />
+        <item
+            android:id="@+id/nav_colors"
+            android:icon="@drawable/ic_colors"
+            android:title="Colors" />
+        <item
+            android:id="@+id/nav_animals"
+            android:icon="@drawable/ic_dog"
+            android:title="Animals" />
+        <item
+            android:id="@+id/nav_fruits"
+            android:icon="@drawable/ic_fruit"
+            android:title="Fruits" />
+    </group>
+
+</menu>

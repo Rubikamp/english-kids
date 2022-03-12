@@ -1,6 +1,10 @@
 <resources>
-    <string name="app_name">english kids</string>
+    <string name="app_name">English Kids</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="hi">hi</string>
+    <string name="colors">Colors</string>
+    <string name="animals">Animals</string>
+    <string name="flags">Flags</string>
+    <string name="fruits">Fruits</string>
 </resources>
