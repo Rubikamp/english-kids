@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"/>
 
     <HorizontalScrollView
-        android:id="@+id/scroll_up"
+        android:id="@+id/scroll_up_fruits"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
@@ -32,7 +32,6 @@
             android:layout_marginEnd="10dp"
             android:orientation="horizontal">
 
-
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -41,7 +40,6 @@
                 android:orientation="horizontal"
                 tools:context=".MainActivity"
                 tools:ignore="MissingConstraints" />
-
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/card_lemon"
@@ -80,7 +78,6 @@
                     app:srcCompat="@drawable/ic_launcher_background" />
             </androidx.cardview.widget.CardView>
 
-
             <androidx.cardview.widget.CardView
                 android:id="@+id/card_coconut"
                 android:layout_width="180dp"
@@ -99,8 +96,6 @@
                     android:scaleType="centerCrop"
                     app:srcCompat="@drawable/ic_launcher_background" />
             </androidx.cardview.widget.CardView>
-
-
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/card_pear"
@@ -123,9 +118,8 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </HorizontalScrollView>
 
-
     <HorizontalScrollView
-        android:id="@+id/scroll_up2"
+        android:id="@+id/scroll_down_fruits"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
@@ -157,8 +151,6 @@
                     android:scaleType="centerCrop"
                     app:srcCompat="@drawable/ic_launcher_background" />
             </androidx.cardview.widget.CardView>
-
-
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/card_strawberry"
@@ -219,9 +211,8 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </HorizontalScrollView>
 
-
     <HorizontalScrollView
-        android:id="@+id/scroll_up2"
+        android:id="@+id/scroll_down_two_fruits"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
@@ -255,7 +246,6 @@
                     app:srcCompat="@drawable/ic_launcher_background" />
             </androidx.cardview.widget.CardView>
 
-
             <androidx.cardview.widget.CardView
                 android:id="@+id/card_grapes"
                 android:layout_width="180dp"
@@ -275,7 +265,6 @@
                     app:srcCompat="@drawable/ic_launcher_background" />
             </androidx.cardview.widget.CardView>
 
-
             <androidx.cardview.widget.CardView
                 android:id="@+id/card_kiwi"
                 android:layout_width="180dp"
@@ -294,7 +283,6 @@
                     android:scaleType="centerCrop"
                     app:srcCompat="@drawable/ic_launcher_background" />
             </androidx.cardview.widget.CardView>
-
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/card_pineapple"
@@ -317,9 +305,8 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </HorizontalScrollView>
 
-
     <HorizontalScrollView
-        android:id="@+id/scroll_up2"
+        android:id="@+id/scroll_down_three_fruits"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"

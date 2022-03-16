@@ -7,4 +7,6 @@
     <string name="animals">Animals</string>
     <string name="flags">Flags</string>
     <string name="fruits">Fruits</string>
+    <string name="drawer_open">Drawer Open</string>
+    <string name="drawer_close">Drawer Close</string>
 </resources>

@@ -1,67 +1,99 @@
 package com.app.languagegame.fragment;
 
+import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.fragment.app.Fragment;
 
+import com.bumptech.glide.Glide;
+import com.example.englishkids.Piclinks;
 import com.example.englishkids.R;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link ColorFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class ColorFragment extends Fragment {
+    AppCompatImageView voiceRed, colorRed, colorYellow, voiceYellow, colorBlue, voiceBlue, colorGreen, voiceGreen, colorBrown, voiceBrown, colorPink, voicePink, colorPurple, voicePurple, colorBlack, voiceBlack, colorOrange, voiceOrange, colorWhite, voiceWhite, colorGold, voiceGold, colorSkyBlue, voiceSkyBlue, colorGray, voiceGray, animOrange, animGreen, animPink;
 
-
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
 
     public ColorFragment() {
-        // Required empty public constructor
-    }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment ColorFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static ColorFragment newInstance(String param1, String param2) {
-        ColorFragment fragment = new ColorFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+    }
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_color, container, false);
+        View view = inflater.inflate(R.layout.fragment_color, container, false);
+        //Red
+        colorRed = view.findViewById(R.id.color_red);
+        Glide.with(this).load(Piclinks.COLOR_RED).placeholder(R.drawable.ic_launcher_background).error(R.drawable.broken_image).into(colorRed);
+        voiceRed = view.findViewById(R.id.color_red);
+        voiceRed.setOnClickListener(v -> startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(Piclinks.VOICE_RED))));
+        //Yellow
 
+
+
+        return view;
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+    }
+
+    @Override
+    public void onViewStateRestored(@Nullable Bundle savedInstanceState) {
+        super.onViewStateRestored(savedInstanceState);
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
     }
 }

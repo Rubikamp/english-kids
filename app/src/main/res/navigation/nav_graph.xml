@@ -8,25 +8,25 @@
     <fragment
         android:id="@+id/nav_flags"
         android:name="com.app.languagegame.fragment.FlagFragment"
-        android:label="fragment_flag"
+        android:label="Flags"
         tools:layout="@layout/fragment_flag" >
     </fragment>
     <fragment
         android:id="@+id/nav_colors"
         android:name="com.app.languagegame.fragment.ColorFragment"
-        android:label="fragment_color"
+        android:label="Colors"
         tools:layout="@layout/fragment_color" />
 
     <fragment
         android:id="@+id/nav_animals"
         android:name="com.app.languagegame.fragment.AnimalsFragment"
-        android:label="fragment_splash"
+        android:label="Animals"
         tools:layout="@layout/fragment_animals" />
 
     <fragment
         android:id="@+id/nav_fruits"
         android:name="com.app.languagegame.fragment.FruitFragment"
-        android:label="fragment_splash"
+        android:label="Fruits"
         tools:layout="@layout/fragment_fruit" />
 
 </navigation>
