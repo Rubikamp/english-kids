@@ -1,6 +1,6 @@
 package com.app.languagegame.fragment;
 
-import android.app.Fragment;
+
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -12,9 +12,9 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatImageView;
+import androidx.fragment.app.Fragment;
 
 import com.bumptech.glide.Glide;
-import com.example.englishkids.Piclinks;
 import com.example.englishkids.R;
 
 
@@ -112,7 +112,7 @@ public class ColorFragment extends Fragment {
         animGreen = view.findViewById(R.id.color_anim_green);
         Glide.with(this).load(Piclinks.ANIM_GREEN).placeholder(R.drawable.ic_launcher_background).error(R.drawable.broken_image).into(animGreen);
         //Anim Pink
-        animPink =view.findViewById(R.id.color_anim_pink);
+        animPink = view.findViewById(R.id.color_anim_pink);
         Glide.with(this).load(Piclinks.ANIM_PINK).placeholder(R.drawable.ic_launcher_background).error(R.drawable.broken_image).into(animPink);
         return view;
     }

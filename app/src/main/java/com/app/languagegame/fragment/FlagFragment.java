@@ -14,7 +14,6 @@ import androidx.appcompat.widget.AppCompatImageView;
 import androidx.fragment.app.Fragment;
 
 import com.bumptech.glide.Glide;
-import com.example.englishkids.Piclinks;
 import com.example.englishkids.R;
 
 
